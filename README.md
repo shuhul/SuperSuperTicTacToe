@@ -1,2 +1,10 @@
 # SuperSuperTicTacToe
-This is a pygame implementation of super super tic tac toe, which is basically a meta version of super tic tac toe.
+To play super super tic tac toe, clone the repository on your device and run using python3.
+Requires the following packages:
+1. Pygame
+2. Os
+3. Numpy
+4. Pynput
+5. Keyboard
+6. Pickle
+Once you have installed the packages required, you can play the game by running Main.py
