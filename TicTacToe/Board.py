@@ -157,7 +157,8 @@ def checkSave():
         if not hasSaved:
             if len(listi1) > 0:
                 print('\nSaving game...')
-                util.saveState(current_board, listi1[-1], x_to_play)
+                util.saveState(board_list, listi1, x_to_play)
+                # util.saveState(current_board, listi1[-1], x_to_play)
                 print('Game Saved')
     else:
         hasSaved = False
@@ -165,12 +166,17 @@ def checkSave():
     if util.isKeyPressed('l'):
         if not hasLoaded:
             print('\nLoading game...')
-            board_list.clear()
-            listi1.clear()
+            # board_list.clear()
+            # listi1.clear()
+            # cb, l, x = util.loadState()
+            # current_board = cb.getCopy()
+            # board_list.append(current_board.getCopy())
+            # listi1.append(l)
+            # x_to_play = x
             cb, l, x = util.loadState()
-            current_board = cb.getCopy()
-            board_list.append(current_board.getCopy())
-            listi1.append(l)
+            board_list = cb
+            current_board = board_list[-1].getCopy()
+            listi1 = list(l)
             x_to_play = x
             print('Game Loaded')
             shouldUpdate = True

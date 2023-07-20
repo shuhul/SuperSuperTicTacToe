@@ -260,14 +260,14 @@ def getAt(arr, x, y):
     return arr[y][x]
 
 def saveState(current_board, last_i1, x2p):
-    pickle.dump(current_board, open('save/current_board.obj', 'wb'))
+    pickle.dump(current_board, open('save/current_board2.obj', 'wb'))
     # pickle.dump(last_i1, open('save/current_board.obj', 'w'))
     # np.save('save/current_board', current_board)
-    np.save('save/last_i1', last_i1)
-    np.save('save/x2p', x2p)
+    np.save('save/last_i12', last_i1)
+    np.save('save/x2p2', x2p)
 
 def loadState():
-    return pickle.load(open('save/current_board.obj', 'rb')), np.load('save/last_i1.npy'), np.load('save/x2p.npy')
+    return pickle.load(open('save/current_board2.obj', 'rb')), np.load('save/last_i12.npy'), np.load('save/x2p2.npy')
 
 # arr = np.zeros((3,3))
 # arr[1][1] = 1
